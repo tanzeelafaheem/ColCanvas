@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import io from "socket.io-client";
 import { useParams } from "react-router-dom";
 
-const socket = io("http://localhost:5005", { transports: ["websocket"] });
+const socket = io("https://colcanvas-backend.onrender.com", { transports: ["websocket"] });
 
 const Board = ({ color, stroke, erase }) => {
   const { roomId } = useParams();
